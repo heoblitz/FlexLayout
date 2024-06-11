@@ -5,8 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "Yoga.h"
-#import "YGLayout.h"
+#import <yoga/Yoga.h>
 
 @interface YGLayout ()
 
