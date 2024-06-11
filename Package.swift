@@ -16,14 +16,15 @@ let package = Package(
       publicHeadersPath: "Public"
     ),
     .target(
-      name: "FlexLayoutYoga",
+      name: "FlexLayoutYogaCore",
       dependencies: [],
-      path: "Sources/yoga",
-      publicHeadersPath: "include/yoga"
+      path: "Sources/YogaCore",
+      publicHeadersPath: ".",
+      cxxSettings: [.headerSearchPath(".")]
     ),
     .target(
       name: "FlexLayoutYogaKit",
-      dependencies: ["FlexLayoutYoga"],
+      dependencies: ["FlexLayoutYogaCore"],
       path: "Sources/YogaKit",
       publicHeadersPath: "include/YogaKit"
     ),
@@ -34,6 +35,5 @@ let package = Package(
       ]
     ),
   ],
-  cLanguageStandard: .gnu99,
-  cxxLanguageStandard: .gnucxx11
+  cxxLanguageStandard: CXXLanguageStandard(rawValue: "c++20")
 )
