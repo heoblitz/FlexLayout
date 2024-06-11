@@ -9,7 +9,7 @@
 import UIKit
 
 #if SWIFT_PACKAGE
-import FlexLayoutYoga
+import FlexLayoutYogaKit
 #endif
 
 extension Flex {
