@@ -18,7 +18,7 @@ let package = Package(
     .target(
       name: "FlexLayoutYoga",
       dependencies: [],
-      path: "Sources/Yoga",
+      path: "Sources/yoga",
       publicHeadersPath: "include/yoga"
     ),
     .target(

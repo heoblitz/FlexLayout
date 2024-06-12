@@ -8,7 +8,7 @@
 import CoreGraphics
 
 #if SWIFT_PACKAGE
-import FlexLayoutYogaKit
+import FlexLayoutYoga
 #endif
 
 extension Int {

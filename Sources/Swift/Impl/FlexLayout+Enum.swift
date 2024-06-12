@@ -15,7 +15,7 @@
 import UIKit
 
 #if SWIFT_PACKAGE
-import FlexLayoutYogaKit
+import FlexLayoutYoga
 
 extension YGFlexDirection {
     static let column = YGFlexDirectionColumn
