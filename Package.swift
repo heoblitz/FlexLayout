@@ -16,15 +16,14 @@ let package = Package(
       publicHeadersPath: "Public"
     ),
     .target(
-      name: "FlexLayoutYogaCore",
+      name: "FlexLayoutYoga",
       dependencies: [],
-      path: "Sources/YogaCore",
-      publicHeadersPath: ".",
-      cxxSettings: [.headerSearchPath(".")]
+      path: "Sources/Yoga",
+      publicHeadersPath: "include/yoga"
     ),
     .target(
       name: "FlexLayoutYogaKit",
-      dependencies: ["FlexLayoutYogaCore"],
+      dependencies: ["FlexLayoutYoga"],
       path: "Sources/YogaKit",
       publicHeadersPath: "include/YogaKit"
     ),
