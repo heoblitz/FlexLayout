@@ -9,23 +9,18 @@
 // CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
-//
-// Created by Luc Dion on 2017-07-17.
 
 import UIKit
-import FlexLayout
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+/// Extend UIView to conform to FlexComponent
+/// This allows UIViews to be used directly in ResultBuilder syntax
+extension UIView: FlexComponent {
+    @discardableResult
+    public func applyToFlex(_ flex: Flex) -> Flex {
+        flex.addItem(self)
+    }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.backgroundColor = UIColor.white
-        window!.rootViewController = UINavigationController(rootViewController: MenuViewController())
-        window!.makeKeyAndVisible()
-
-        return true
+    public func extractViews() -> [UIView] {
+        [self]
     }
 }

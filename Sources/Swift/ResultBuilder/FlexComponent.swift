@@ -9,23 +9,17 @@
 // CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
-//
-// Created by Luc Dion on 2017-07-17.
 
 import UIKit
-import FlexLayout
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+/// Protocol that all flex layout components must conform to
+/// This allows both UIViews and flex containers to be used in the ResultBuilder syntax
+@MainActor
+public protocol FlexComponent {
+    /// Apply this component to a parent Flex container
+    @discardableResult
+    func applyToFlex(_ flex: Flex) -> Flex
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.backgroundColor = UIColor.white
-        window!.rootViewController = UINavigationController(rootViewController: MenuViewController())
-        window!.makeKeyAndVisible()
-
-        return true
-    }
+    /// Extract all UIViews contained in this component
+    func extractViews() -> [UIView]
 }

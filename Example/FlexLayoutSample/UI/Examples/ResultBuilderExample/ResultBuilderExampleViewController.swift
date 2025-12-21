@@ -9,23 +9,24 @@
 // CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
-//
-// Created by Luc Dion on 2017-07-17.
 
 import UIKit
-import FlexLayout
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+class ResultBuilderExampleViewController: BaseViewController {
+    fileprivate var mainView: ResultBuilderExampleView {
+        return self.view as! ResultBuilderExampleView
+    }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    init(pageType: PageType) {
+        super.init()
+        title = pageType.text
+    }
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.backgroundColor = UIColor.white
-        window!.rootViewController = UINavigationController(rootViewController: MenuViewController())
-        window!.makeKeyAndVisible()
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
-        return true
+    override func loadView() {
+        view = ResultBuilderExampleView()
     }
 }

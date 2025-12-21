@@ -47,6 +47,8 @@
 		B9EA7C952409BB30000D8E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249EFE421E64FAFE00165E39 /* AppDelegate.swift */; };
 		DA9F7723277329C600FC4DF1 /* YogaExampleFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAE157247DF4CE0020119C /* YogaExampleFViewController.swift */; };
 		DA9F7724277329D000FC4DF1 /* YogaExampleFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAE155247DF4120020119C /* YogaExampleFView.swift */; };
+		EFAEA3382EF8238D00A07A0F /* ResultBuilderExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAEA3352EF8238D00A07A0F /* ResultBuilderExampleView.swift */; };
+		EFAEA3392EF8238D00A07A0F /* ResultBuilderExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAEA3362EF8238D00A07A0F /* ResultBuilderExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		DF0E852A1F1F749C00AB1956 /* YogaExampleBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleBViewController.swift; sourceTree = "<group>"; };
 		DF91747D1F1F6F9A0034632D /* YogaExampleAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleAView.swift; sourceTree = "<group>"; };
 		DF91747E1F1F6F9A0034632D /* YogaExampleAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaExampleAViewController.swift; sourceTree = "<group>"; };
+		EFAEA3352EF8238D00A07A0F /* ResultBuilderExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBuilderExampleView.swift; sourceTree = "<group>"; };
+		EFAEA3362EF8238D00A07A0F /* ResultBuilderExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBuilderExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		2439CC371E665C5E003326FB /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				EFAEA3372EF8238D00A07A0F /* ResultBuilderExample */,
 				24901F071F93D40F0025D11B /* CollectionViewExample */,
 				247D73421F6757A00001AE2C /* Example1 */,
 				24B14C581F278CB400C90490 /* Intro */,
@@ -319,6 +324,15 @@
 			path = YogaExampleA;
 			sourceTree = "<group>";
 		};
+		EFAEA3372EF8238D00A07A0F /* ResultBuilderExample */ = {
+			isa = PBXGroup;
+			children = (
+				EFAEA3352EF8238D00A07A0F /* ResultBuilderExampleView.swift */,
+				EFAEA3362EF8238D00A07A0F /* ResultBuilderExampleViewController.swift */,
+			);
+			path = ResultBuilderExample;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -436,6 +450,8 @@
 				B9EA7C6B2409B7B5000D8E35 /* MenuViewController.swift in Sources */,
 				B9EA7C782409B7D3000D8E35 /* MethodCell.swift in Sources */,
 				B9EA7C7D2409B7D7000D8E35 /* CollectionViewExampleView.swift in Sources */,
+				EFAEA3382EF8238D00A07A0F /* ResultBuilderExampleView.swift in Sources */,
+				EFAEA3392EF8238D00A07A0F /* ResultBuilderExampleViewController.swift in Sources */,
 				B9EA7C692409B7B5000D8E35 /* UIImageView+Download.swift in Sources */,
 				B9EA7C722409B7CB000D8E35 /* YogaExampleBView.swift in Sources */,
 				B9EA7C6E2409B7C5000D8E35 /* YogaExampleDView.swift in Sources */,
